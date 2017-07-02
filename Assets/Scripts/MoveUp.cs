@@ -37,7 +37,7 @@ public class MoveUp : MonoBehaviour {
     void RotateCube()
     {
         Vector3 currentRotation = this.transform.rotation.eulerAngles;
-        this.transform.Rotate(new Vector3(0,10,0));
+        this.transform.Rotate(new Vector3(0,15,0));
     }
 
 }
