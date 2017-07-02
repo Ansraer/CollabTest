@@ -23,11 +23,11 @@ public class MoveUp : MonoBehaviour {
     {
         if (this.transform.position.y > 10)
         {
-            moveUp = -.1f;
+            moveUp = -.2f;
             RotateCube();
         } else if (this.transform.position.y < 0)
         {
-            moveUp = .1f;
+            moveUp = .2f;
             this.GetComponent<Renderer>().material = red;
         }   
             
