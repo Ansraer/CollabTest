@@ -19,12 +19,21 @@ public class MoveUp : MonoBehaviour {
     private void FixedUpdate()
     {
         if (this.transform.position.y > 10)
+        {
             moveUp = -.1f;
-        else if (this.transform.position.y < 0)
+            RotateCube();
+        } else if (this.transform.position.y < 0)
             moveUp = .1f;
 
         this.transform.Translate(new Vector3(0, moveUp, 0));
 
 
     }
+
+    void RotateCube()
+    {
+        Vector3 currentRotation = this.transform.rotation.eulerAngles;
+        this.transform.Rotate(new Vector3(0,10,0));
+    }
+
 }
