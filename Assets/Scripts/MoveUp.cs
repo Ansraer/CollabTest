@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MoveUp : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    float moveUp = .1f;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,11 +18,10 @@ public class MoveUp : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        float moveUp = .1f;
-
         if (this.transform.position.y > 10)
             moveUp = -.1f;
-        
+        else if (this.transform.position.y < 0)
+            moveUp = .1f;
 
         this.transform.Translate(new Vector3(0, moveUp, 0));
 
