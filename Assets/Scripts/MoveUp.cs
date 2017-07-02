@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MoveUp : MonoBehaviour {
 
+    public Material blue;
+    public Material red;
+
     float moveUp = .1f;
 
     // Use this for initialization
@@ -21,9 +24,13 @@ public class MoveUp : MonoBehaviour {
         if (this.transform.position.y > 10)
             moveUp = -.1f;
         else if (this.transform.position.y < 0)
+        {
             moveUp = .1f;
-
+            this.GetComponent<Renderer>().material = red;
+        }
+            
         this.transform.Translate(new Vector3(0, moveUp, 0));
+
 
 
     }
